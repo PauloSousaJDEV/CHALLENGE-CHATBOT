@@ -1,0 +1,13 @@
+Watson Assist
+
+API Key - HaFhHXsHCD-gVrV66gnIoHIBwVwVCB8wtIIub_Zx_8Vx
+
+Assistant ID - bbcaf6d1-813d-489d-bc9c-18e93b69b732
+
+Text to Speech
+
+API Key - HLLXpLDecYpgmtPwaPJpLwgQzBEwr9nVnpwQ43wpjHTQ
+
+Speech to Text
+
+API Key - mBqDfZVzyCIrEU-cYB1Op_j60WDzvHZG4CIkIvwnjt1M

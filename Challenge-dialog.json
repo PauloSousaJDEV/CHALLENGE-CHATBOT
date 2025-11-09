@@ -1,0 +1,888 @@
+{
+  "intents": [
+    {
+      "intent": "agradecimento",
+      "examples": [
+        {
+          "text": "Agradeço a ajuda"
+        },
+        {
+          "text": "Muito Obrigado"
+        },
+        {
+          "text": "Obrigado"
+        },
+        {
+          "text": "Obrigado pela informação"
+        },
+        {
+          "text": "Valeu"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "audio",
+      "examples": [
+        {
+          "text": "agora só em audio"
+        },
+        {
+          "text": "preciso que seja em audio"
+        },
+        {
+          "text": "somente em audio"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "cadastro_voluntatio",
+      "examples": [
+        {
+          "text": "Como faço para me cadastrar?"
+        },
+        {
+          "text": "Onde me inscrevo para o voluntariado?"
+        },
+        {
+          "text": "Qual é o processo para ser voluntário?"
+        },
+        {
+          "text": "Quero me tornar um voluntário."
+        },
+        {
+          "text": "Quero participar dos projetos."
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "comunicar_recusa",
+      "examples": [
+        {
+          "text": "Como faço para informar a recusa?"
+        },
+        {
+          "text": "Preciso comunicar a recusa no atendimento de um paciente."
+        },
+        {
+          "text": "Preciso negar um atendimento."
+        },
+        {
+          "text": "Queria reportar a recusa de um paciente."
+        },
+        {
+          "text": "Quero relatar um problema com paciente."
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "doacao_alto_valor",
+      "examples": [
+        {
+          "text": "Gostaria de investir nos projetos de vocês."
+        },
+        {
+          "text": "Quem eu procuro para uma doação alta?"
+        },
+        {
+          "text": "Queria doar, como fazer?"
+        },
+        {
+          "text": "Quero fazer uma doação grande."
+        },
+        {
+          "text": "Sou investidor e quero ajudar."
+        },
+        {
+          "text": "Tenho interesse em doar um valor alto."
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "duvidas_gerais",
+      "examples": [
+        {
+          "text": "Como é o trabalho voluntário?"
+        },
+        {
+          "text": "Como funciona o voluntariado de vocês?"
+        },
+        {
+          "text": "Dúvidas Gerais"
+        },
+        {
+          "text": "O que vocês fazem?"
+        },
+        {
+          "text": "Quais são as atividades?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "encaminhamento_psicologo",
+      "examples": [
+        {
+          "text": "Conhecem algum psicólogo?"
+        },
+        {
+          "text": "Estou com problemas de saúde mental."
+        },
+        {
+          "text": "Gostaria de falar com um profissional."
+        },
+        {
+          "text": "Preciso de ajuda de psicólogo."
+        },
+        {
+          "text": "Preciso encaminhar um paciente para o time de psicólogos."
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "saudacao",
+      "examples": [
+        {
+          "text": "Bom dia"
+        },
+        {
+          "text": "Oi"
+        },
+        {
+          "text": "Oi, Tudo bem?"
+        },
+        {
+          "text": "Oi, tudo bom?"
+        },
+        {
+          "text": "Olá"
+        },
+        {
+          "text": "Tudo bem?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "texto",
+      "examples": [
+        {
+          "text": "agora só em texto"
+        },
+        {
+          "text": "apenas texto"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "area_interesse",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "animais",
+          "synonyms": [
+            "ajuda aos animais",
+            "ecologia"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "arte",
+          "synonyms": [
+            "projetos artísticos"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "educação",
+          "synonyms": [
+            "área de educação"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "saúde",
+          "synonyms": [
+            "saúde bucal"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "confirmacao",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "não",
+          "synonyms": [
+            "incorreto",
+            "negativo"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "sim",
+          "synonyms": [
+            "confirmo",
+            "isso",
+            "positivo"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "contato_pessoal",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "para capturar informações como nome e telefone",
+          "synonyms": [
+            "para capturar informações como nome e telefone"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "email",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "email",
+          "patterns": [
+            "\\b[A-Za-z0-9._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,}\\b"
+          ]
+        }
+      ],
+      "fuzzy_match": false
+    },
+    {
+      "entity": "modo_resposta",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "audio",
+          "synonyms": [
+            "audio",
+            "áudio",
+            "mandar voz",
+            "quero áudio",
+            "responder por áudio",
+            "voz"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "texto",
+          "synonyms": [
+            "digitar",
+            "escrever",
+            "resposta em texto",
+            "text"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": []
+    },
+    {
+      "entity": "tipo_doacao",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "alimentos",
+          "synonyms": [
+            "cesta básica",
+            "comida"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "dinheiro",
+          "synonyms": [
+            "grana",
+            "recursos financeiros"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "materiais",
+          "synonyms": [
+            "produtos de limpeza",
+            "utensílios"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "tipo_evento",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "ação social",
+          "synonyms": [
+            "ação comunitária"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "multirão de limpeza",
+          "synonyms": [
+            "multirão"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "palestra",
+          "synonyms": [
+            "encontro"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "workshop",
+          "synonyms": [
+            "aula"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Bem-vindo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Bem Vindo a Turma do Bem!\n\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "title": "Em outros casos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Eu não entendi. Você pode tentar reformular a frase."
+              },
+              {
+                "text": "Você pode reformular sua afirmação? Eu não estou entendendo."
+              },
+              {
+                "text": "Eu não entendi o sentido."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Em outros casos",
+      "previous_sibling": "node_5_1760880343451",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "Detalhe da Recusa",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sinto muito que isso esteja ocorrendo. Por gentileza envie um e-mail para tdb@tdb.com.br relatando o caso e colocando os dados do paciente que iremos dar as tratativas necessárias.\n\nVocê precisa de alguma informação adicional?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1760880155603",
+      "conditions": "true",
+      "dialog_node": "node_1_1760880184978"
+    },
+    {
+      "type": "standard",
+      "title": "Captura de Contato",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ótimo! Anotado. Nossa equipe entrará em contato em breve. Mais uma vez, muito obrigado.\n\nVocê precisa de alguma informação adicional?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1760880259806",
+      "conditions": "true",
+      "dialog_node": "node_1_1760880302591"
+    },
+    {
+      "type": "standard",
+      "title": "Continua atendimento",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Pois não, o que mais posso fazer por você?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1760879943825",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1761646556818"
+      },
+      "conditions": "@confirmacao:sim",
+      "dialog_node": "node_1_1761646979253",
+      "previous_sibling": "node_5_1761646897639"
+    },
+    {
+      "type": "standard",
+      "title": "Encerramento Cordial",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Certo, então! Se precisar de algo mais, é só chamar. Tenha um bom dia!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1760880184978",
+      "conditions": "@confirmacao:não",
+      "dialog_node": "node_1_1762523009107"
+    },
+    {
+      "type": "standard",
+      "title": "Continua atendimento",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Pois não, o que mais posso fazer por você?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1760880184978",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1761646556818"
+      },
+      "conditions": "@confirmacao:sim",
+      "dialog_node": "node_2_1762523032442",
+      "previous_sibling": "node_1_1762523009107"
+    },
+    {
+      "type": "standard",
+      "title": "Doação Alto Valor",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Agradecemos seu interesse. Para doações de alto valor, podemos te colocar em contato direto com a nossa equipe responsável. Por favor, deixe seu nome e telefone para que possamos agendar um contato."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#doacao_alto_valor",
+      "dialog_node": "node_3_1760880259806",
+      "previous_sibling": "node_6_1760880155603"
+    },
+    {
+      "type": "standard",
+      "title": "Encerramento Cordial",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Certo, por favor forneça seu e-mail que irei encaminhar nossa lista de parceiros e postos de serviço."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1760880097269",
+      "conditions": "@confirmacao:sim",
+      "dialog_node": "node_3_1761647309129",
+      "previous_sibling": "node_8_1761647282670"
+    },
+    {
+      "type": "standard",
+      "title": "Encerramento Cordial",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Certo, então! Se precisar de algo mais, é só chamar. Tenha um bom dia!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1760880302591",
+      "conditions": "@confirmacao:não",
+      "dialog_node": "node_3_1762523406732"
+    },
+    {
+      "type": "standard",
+      "title": "Continua atendimento",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Pois não, o que mais posso fazer por você?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1760880302591",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1761646556818"
+      },
+      "conditions": "@confirmacao:sim",
+      "dialog_node": "node_4_1762523418212",
+      "previous_sibling": "node_3_1762523406732"
+    },
+    {
+      "type": "standard",
+      "title": "Dúvidas Gerais",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Nosso trabalho voluntário é voltado ao atendimento de pessoas em situação de vulnerabilidade social, com foco em jovens em busca do primeiro emprego e em mulheres vítimas de violência doméstica. Desenvolvemos programas de saúde bucal que promovem bem-estar e inclusão social para esses públicos."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#duvidas_gerais",
+      "dialog_node": "node_5_1760880343451",
+      "previous_sibling": "node_3_1760880259806"
+    },
+    {
+      "type": "standard",
+      "title": "Saudação",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Bem Vindo a Turma do Bem!\n\nAntes de começarmos, como você prefere receber minhas respostas:\nÁudio ou Texto"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#saudacao",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_5_1761646556818",
+      "previous_sibling": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "title": "Encerramento Cordial",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Certo, então! Se precisar de algo mais, é só chamar. Tenha um bom dia!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1760879943825",
+      "conditions": "@confirmacao:não",
+      "dialog_node": "node_5_1761646897639"
+    },
+    {
+      "type": "standard",
+      "title": "Captura email",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Obrigado, já enviei a lista para seu e-mail. Tenha um excelente dia."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1761647309129",
+      "conditions": "@email",
+      "dialog_node": "node_5_1761648112132"
+    },
+    {
+      "type": "standard",
+      "title": "Encerramento Cordial",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Certo, então! Se precisar de algo mais, é só chamar. Tenha um bom dia!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1760880343451",
+      "conditions": "@confirmacao:não",
+      "dialog_node": "node_5_1762523466916"
+    },
+    {
+      "type": "standard",
+      "title": "Comunicar Recusa",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Qual seria o motivo da recusa?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#comunicar_recusa",
+      "dialog_node": "node_6_1760880155603",
+      "previous_sibling": "node_7_1760880097269"
+    },
+    {
+      "type": "standard",
+      "title": "Continua atendimento",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Pois não, o que mais posso fazer por você?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1760880343451",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1761646556818"
+      },
+      "conditions": "@confirmacao:sim",
+      "dialog_node": "node_6_1762523476118",
+      "previous_sibling": "node_5_1762523466916"
+    },
+    {
+      "type": "standard",
+      "title": "Encaminhamento Psicólogo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Entendo. Lamento que esteja tendo problema com seu paciente. Nossas atividades voluntárias não incluem atendimento psicológico direto. No entanto, posso te encaminhar para profissionais parceiros ou serviços de apoio. Você gostaria que eu te passasse o contato de alguns psicólogos?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#encaminhamento_psicologo",
+      "dialog_node": "node_7_1760880097269",
+      "previous_sibling": "node_8_1760879943825"
+    },
+    {
+      "type": "standard",
+      "title": "Definir Audio",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Combinado! Respostas serão em áudio. Em que posso ajudar?\n- Cadastro Voluntário\n- Encaminhamento Psicologico\n- Comunicar Recusa- Doações Alto Valor\n- Dúvidas Gerais"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#audio",
+      "dialog_node": "node_7_1762218686655",
+      "previous_sibling": "node_8_1761687576228"
+    },
+    {
+      "type": "standard",
+      "title": "Cadastro Voluntário",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá! Fico feliz com seu interesse. Para se cadastrar, acesse nosso formulário online em[www.tdb.com.br/cadastro]. Lá você preencherá seus dados e preferências de atuação. Você precisa de alguma informação adicional?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#cadastro_voluntatio",
+      "dialog_node": "node_8_1760879943825",
+      "previous_sibling": "node_7_1762218686655"
+    },
+    {
+      "type": "standard",
+      "title": "Encerramento Cordial",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Certo, então! Se precisar de algo mais, é só chamar. Tenha um bom dia!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1760880097269",
+      "conditions": "@confirmacao:não",
+      "dialog_node": "node_8_1761647282670"
+    },
+    {
+      "type": "standard",
+      "title": "Definir Texto",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ótimo! Agora sim em que posso ajudar?\n\n- Cadastro Voluntário\n- Encaminhamento Psicologico\n- Comunicar Recusa\n- Doações Alto Valor\n- Dúvidas Gerais"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {},
+      "conditions": "#texto",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_8_1761687576228",
+      "previous_sibling": "node_5_1761646556818"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": "Você quis dizer:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "Nenhuma das anteriores",
+      "use_connect_to_support_prompt": "Connect to support",
+      "single_answer_clarification_prompt": "Something else"
+    },
+    "human_agent_assist": {
+      "prompt": "Você quis dizer:"
+    }
+  },
+  "learning_opt_out": false,
+  "language": "pt-br",
+  "description": "",
+  "name": "Challenge-dialog"
+}
